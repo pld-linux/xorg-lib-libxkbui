@@ -1,5 +1,3 @@
-# $Rev: 3332 $, $Date: 2005-08-27 17:42:48 $
-#
 Summary:	xkbui library
 Summary(pl):	Biblioteka xkbui
 Name:		xorg-lib-libxkbui
@@ -12,12 +10,12 @@ Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/lib/libxkbui-%{version}.tar.bz2
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	xorg-lib-libXt-devel
 BuildRequires:	libtool
-BuildRequires:	xorg-lib-libxkbfile-devel
 BuildRequires:	pkgconfig >= 0.19
+BuildRequires:	xorg-lib-libXt-devel
+BuildRequires:	xorg-lib-libxkbfile-devel
 BuildRequires:	xorg-util-util-macros
-BuildRoot:	%{tmpdir}/libxkbui-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 
@@ -27,15 +25,13 @@ xkbui library.
 %description -l pl
 Biblioteka xkbui.
 
-
 %package devel
 Summary:	Header files libxkbui development
 Summary(pl):	Pliki nag³ówkowe do biblioteki libxkbui
 Group:		X11/Development/Libraries
-Requires:	xorg-lib-libxkbui = %{version}-%{release}
+Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXt-devel
 Requires:	xorg-lib-libxkbfile-devel
-
 
 %description devel
 xkbui library.
@@ -49,12 +45,11 @@ Biblioteka xkbui.
 Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
 u¿ywaj±cych biblioteki libxkbui.
 
-
 %package static
-Summary:	Static libxkbui libraries
-Summary(pl):	Biblioteki statyczne libxkbui
-Group:		Development/Libraries
-Requires:	xorg-lib-libxkbui-devel = %{version}-%{release}
+Summary:	Static libxkbui library
+Summary(pl):	Biblioteka statyczna libxkbui
+Group:		X11/Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 xkbui library.
@@ -64,12 +59,10 @@ This package contains the static libxkbui library.
 %description static -l pl
 Biblioteka xkbui.
 
-Pakiet zawiera statyczne biblioteki libxkbui.
-
+Pakiet zawiera statyczn± bibliotekê libxkbui.
 
 %prep
 %setup -q -n libxkbui-%{version}
-
 
 %build
 %{__libtoolize}
@@ -81,7 +74,6 @@ Pakiet zawiera statyczne biblioteki libxkbui.
 
 %{__make}
 
-
 %install
 rm -rf $RPM_BUILD_ROOT
 
@@ -89,28 +81,23 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	pkgconfigdir=%{_pkgconfigdir}
 
-
 %clean
 rm -rf $RPM_BUILD_ROOT
-
 
 %post	-p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
-
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog
-%attr(755,root,wheel) %{_libdir}/libxkbui.so.*
-
+%attr(755,root,root) %{_libdir}/libxkbui.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/X11/extensions/*.h
+%attr(755,root,root) %{_libdir}/libxkbui.so
 %{_libdir}/libxkbui.la
-%attr(755,root,wheel) %{_libdir}/libxkbui.so
+%{_includedir}/X11/extensions/*.h
 %{_pkgconfigdir}/xkbui.pc
-
 
 %files static
 %defattr(644,root,root,755)
