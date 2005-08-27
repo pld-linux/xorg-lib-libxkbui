@@ -1,4 +1,4 @@
-# $Rev: 3332 $, $Date: 2005-08-15 12:17:57 $
+# $Rev: 3332 $, $Date: 2005-08-27 17:42:48 $
 #
 Summary:	xkbui library
 Summary(pl):	Biblioteka xkbui
@@ -15,7 +15,7 @@ BuildRequires:	automake
 BuildRequires:	xorg-lib-libXt-devel
 BuildRequires:	libtool
 BuildRequires:	xorg-lib-libxkbfile-devel
-BuildRequires:	pkg-config
+BuildRequires:	pkgconfig >= 0.19
 BuildRequires:	xorg-util-util-macros
 BuildRoot:	%{tmpdir}/libxkbui-%{version}-root-%(id -u -n)
 
