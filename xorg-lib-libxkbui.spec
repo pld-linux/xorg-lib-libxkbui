@@ -24,8 +24,8 @@ xkbui library.
 Biblioteka xkbui.
 
 %package devel
-Summary:	Header files libxkbui development
-Summary(pl):	Pliki nag³ówkowe do biblioteki libxkbui
+Summary:	Header files for libxkbui library
+Summary(pl):	Pliki nag³ówkowe biblioteki libxkbui
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXt-devel
@@ -35,7 +35,7 @@ Requires:	xorg-lib-libxkbfile-devel
 xkbui library.
 
 This package contains the header files needed to develop programs that
-use these libxkbui.
+use libxkbui.
 
 %description devel -l pl
 Biblioteka xkbui.
