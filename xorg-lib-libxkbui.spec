@@ -1,12 +1,12 @@
 Summary:	xkbui library
 Summary(pl):	Biblioteka xkbui
 Name:		xorg-lib-libxkbui
-Version:	1.0.1
+Version:	1.0.2
 Release:	1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/lib/libxkbui-%{version}.tar.bz2
-# Source0-md5:	ed35b209b17fab2660cc7821d5001197
+Source0:	http://xorg.freedesktop.org/releases/individual/lib/libxkbui-%{version}.tar.bz2
+# Source0-md5:	1143e456f7429e18e88f2eadb2f2b6b1
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
