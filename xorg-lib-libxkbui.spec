@@ -1,5 +1,5 @@
 Summary:	xkbui library
-Summary(pl):	Biblioteka xkbui
+Summary(pl.UTF-8):   Biblioteka xkbui
 Name:		xorg-lib-libxkbui
 Version:	1.0.2
 Release:	3
@@ -20,12 +20,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 xkbui library.
 
-%description -l pl
+%description -l pl.UTF-8
 Biblioteka xkbui.
 
 %package devel
 Summary:	Header files for libxkbui library
-Summary(pl):	Pliki nag³ówkowe biblioteki libxkbui
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libxkbui
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXt-devel
@@ -37,15 +37,15 @@ xkbui library.
 This package contains the header files needed to develop programs that
 use libxkbui.
 
-%description devel -l pl
+%description devel -l pl.UTF-8
 Biblioteka xkbui.
 
-Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
-u¿ywaj±cych biblioteki libxkbui.
+Pakiet zawiera pliki nagÅ‚Ã³wkowe niezbÄ™dne do kompilowania programÃ³w
+uÅ¼ywajÄ…cych biblioteki libxkbui.
 
 %package static
 Summary:	Static libxkbui library
-Summary(pl):	Biblioteka statyczna libxkbui
+Summary(pl.UTF-8):   Biblioteka statyczna libxkbui
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
@@ -54,10 +54,10 @@ xkbui library.
 
 This package contains the static libxkbui library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteka xkbui.
 
-Pakiet zawiera statyczn± bibliotekê libxkbui.
+Pakiet zawiera statycznÄ… bibliotekÄ™ libxkbui.
 
 %prep
 %setup -q -n libxkbui-%{version}
