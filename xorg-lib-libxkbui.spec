@@ -1,5 +1,5 @@
 Summary:	xkbui library
-Summary(pl.UTF-8):   Biblioteka xkbui
+Summary(pl.UTF-8):	Biblioteka xkbui
 Name:		xorg-lib-libxkbui
 Version:	1.0.2
 Release:	3
@@ -25,7 +25,7 @@ Biblioteka xkbui.
 
 %package devel
 Summary:	Header files for libxkbui library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libxkbui
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libxkbui
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXt-devel
@@ -45,7 +45,7 @@ używających biblioteki libxkbui.
 
 %package static
 Summary:	Static libxkbui library
-Summary(pl.UTF-8):   Biblioteka statyczna libxkbui
+Summary(pl.UTF-8):	Biblioteka statyczna libxkbui
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
