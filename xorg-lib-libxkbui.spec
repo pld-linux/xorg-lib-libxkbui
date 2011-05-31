@@ -2,7 +2,7 @@ Summary:	xkbui library
 Summary(pl.UTF-8):	Biblioteka xkbui
 Name:		xorg-lib-libxkbui
 Version:	1.0.2
-Release:	5
+Release:	6
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libxkbui-%{version}.tar.bz2
@@ -13,7 +13,7 @@ BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXt-devel
-BuildRequires:	xorg-lib-libxkbfile-devel
+BuildRequires:	xorg-lib-libxkbfile-devel >= 1.0.7-2
 BuildRequires:	xorg-util-util-macros
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -79,6 +79,8 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	pkgconfigdir=%{_pkgconfigdir}
 
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libxkbui.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -93,7 +95,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libxkbui.so
-%{_libdir}/libxkbui.la
 %{_includedir}/X11/extensions/*.h
 %{_pkgconfigdir}/xkbui.pc
 
