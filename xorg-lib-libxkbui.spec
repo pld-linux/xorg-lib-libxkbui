@@ -2,7 +2,7 @@ Summary:	xkbui library
 Summary(pl.UTF-8):	Biblioteka xkbui
 Name:		xorg-lib-libxkbui
 Version:	1.0.2
-Release:	6
+Release:	7
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libxkbui-%{version}.tar.bz2
@@ -91,6 +91,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc COPYING ChangeLog
 %attr(755,root,root) %{_libdir}/libxkbui.so.*.*.*
+%ghost %{_libdir}/libxkbui.so.1
 
 %files devel
 %defattr(644,root,root,755)
